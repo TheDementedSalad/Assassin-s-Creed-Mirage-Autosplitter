@@ -1,11 +1,6 @@
 //Load remover orginally by TheDementedSalad
 //Update for latest Release by TpRedNinja
-state ("ACMirage", "Release")
-{
-	byte Load	: 0x6F20504;
-}
 
-//[71224] E1EC754BE4BBDA435AF11BB329FFBB3B 
 state("ACMirage","Current")
 {
     int loading: 0x061028B8, 0x68;
@@ -30,8 +25,8 @@ init
             version = "Current";
             break;
         default:
-            print("Unknown version detected");
-            return false;
+            version = "Current";
+            break;
     }
 }
 
@@ -45,8 +40,8 @@ isLoading
         if (current.loading == 1 && old.loading == 0)
         {
             return true;
-        }else
-        {
+        }
+        else{
             return false;
         }
     }
