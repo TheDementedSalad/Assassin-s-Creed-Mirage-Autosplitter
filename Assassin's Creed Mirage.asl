@@ -32,10 +32,7 @@ init
 
 isLoading
 {
-	if (version == "Release")
-    {
-        return current.Load != 11;
-    } else if(version == "Current")
+	if(version == "Current")
     {
         if (current.loading == 1 && old.loading == 0)
         {
