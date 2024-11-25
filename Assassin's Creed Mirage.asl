@@ -1,9 +1,5 @@
 //Load remover orginally by TheDementedSalad
 //Update for latest Release by TpRedNinja
-state ("ACMirage", "Release")
-{
-	byte Load	: 0x6F20504;
-}
 
 state("ACMirage","Current")
 {
@@ -25,6 +21,9 @@ init
         case "A4D96EBBFF2D861198F1D70191778246":
             version = "Release";
             break;
+        case "E1EC754BE4BBDA435AF11BB329FFBB3B";
+            version = "Current";
+            break;
         default:
             version = "Current";
             break;
@@ -41,6 +40,9 @@ isLoading
         if (current.loading == 1 && old.loading == 0)
         {
             return true;
+        }
+        else{
+            return false;
         }
     }
 	
