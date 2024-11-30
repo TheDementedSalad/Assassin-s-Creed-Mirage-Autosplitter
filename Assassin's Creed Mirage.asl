@@ -18,31 +18,18 @@ init
 
     switch (md5)
     {
-        case "A4D96EBBFF2D861198F1D70191778246":
-            version = "Release";
-            break;
-        case "E1EC754BE4BBDA435AF11BB329FFBB3B";
+        case "E1EC754BE4BBDA435AF11BB329FFBB3B":
             version = "Current";
             break;
         default:
-            version = "Current";
+            version = "N/A";
             break;
     }
 }
 
 isLoading
 {
-	if(version == "Current")
-    {
-        if (current.loading == 1 && old.loading == 0)
-        {
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-	
+    return current.loading == 1;
 }
 
 exit
