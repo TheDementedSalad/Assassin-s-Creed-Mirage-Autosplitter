@@ -3,7 +3,7 @@
 
 state("ACMirage","Current")
 {
-    int loading: 0x061028B8, 0x68;
+    int loading: 0x061A74B8, 0x58, 0xC0, 0x110, 0x2C;
 }
 
 startup
@@ -18,7 +18,7 @@ init
 
     switch (md5)
     {
-        case "E1EC754BE4BBDA435AF11BB329FFBB3B":
+        case "75A493343F6DA1B0BF38FF8C039512CF":
             version = "Current";
             break;
         default:
